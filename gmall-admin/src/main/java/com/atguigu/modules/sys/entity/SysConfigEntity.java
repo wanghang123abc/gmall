@@ -12,7 +12,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 
 /**
  * 系统配置信息
@@ -24,9 +25,11 @@ import javax.validation.constraints.NotBlank;
 public class SysConfigEntity {
 	@TableId
 	private Long id;
-	@NotBlank(message="参数名不能为空")
+
+	@NotNull
 	private String paramKey;
-	@NotBlank(message="参数值不能为空")
+
+	@NotNull
 	private String paramValue;
 	private String remark;
 
