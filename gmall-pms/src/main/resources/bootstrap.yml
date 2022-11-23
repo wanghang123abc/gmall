@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: pms-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 81.68.207.197:8858
+        port: 8719
+    nacos:
+      discovery:
+        server-addr: 81.68.207.197:8848
+        namespace: 9fe6b474-2e9f-4ddd-a552-92407763cb14
+        group: dev
+      config:
+        server-addr: 81.68.207.197:8848
+        namespace: 9fe6b474-2e9f-4ddd-a552-92407763cb14
+        group: dev
+        file-extension: yml  # 默认找服务名.properties文件
+
+feign:
+  sentinel:
+    enabled: true
